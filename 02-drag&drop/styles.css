@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e5e5e5;
+  display: flex;
+  padding-top: 5rem;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.row.content {
+  flex-grow: 1;
+}
+
+.col-header {
+  width: 150px;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+}
+
+.item {
+  width: 150px;
+  height: 66px;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  background: #f7f6f7;
+  padding: 0.8rem 1rem;
+  color: #828282;
+  text-align: center;
+  cursor: grab;
+  border: 4px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  width: 150px;
+  /*height: 66px;*/
+  padding-top: 10px;
+  position: relative;
+  height: 100%;
+  border: 2px solid transparent;
+  border-bottom: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.start {
+  background: linear-gradient(90deg, #ff85e4 0%, #229efd 179.25%);
+}
+
+.progress {
+  background: linear-gradient(90deg, #209cff 0%, #68e0cf 100%);
+}
+
+.done {
+  background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.item.hold {
+  border-color: #d5e456;
+}
+
+.hide {
+  display: none;
+}
+
+.placeholder.hovered:nth-child(1) {
+  border-top-color: #ff85e4;
+  border-left-color: #229efd;
+  border-right-color: #229efd;
+}
+
+.placeholder.hovered:nth-child(2) {
+  border-top-color: #209cff;
+  border-left-color: #68e0cf;
+  border-right-color: #68e0cf;
+}
+
+.placeholder.hovered:nth-child(3) {
+  border-top-color: #84fab0;
+  border-left-color: #8fd3f4;
+  border-right-color: #8fd3f4;
+}
